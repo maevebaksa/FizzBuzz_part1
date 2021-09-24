@@ -10,6 +10,7 @@ int main(){
   //create a testing number and the wastext boolean
   int testing_number;
   bool was_text;
+  was_text = false;
 
   //create an integer that is the value in which the device prints fizz
   int fizzvalue;
@@ -38,17 +39,17 @@ int main(){
 
   if(testing_number%fizzvalue == 0){
     output_string.append("Fizz");
-    was_text = 1;
+    was_text = true;
   }
 
   if (testing_number%buzzvalue == 0){
     output_string.append("Buzz");
-    was_text = 1;
+    was_text = true;
   }
 
   if (testing_number%wuzzvalue == 0){
     output_string.append("Wuzz");
-    was_text = 1;
+    was_text = true;
   }
   
   //this checks if neither the fizz, buzz or wuzz were used and then if not, append the original number
@@ -56,7 +57,7 @@ int main(){
   //source:
   //https://www.javatpoint.com/cpp-int-to-string
 
-  if (was_text == 0){
+  if (was_text == false){
     output_string.append(to_string(testing_number));
   }
   
